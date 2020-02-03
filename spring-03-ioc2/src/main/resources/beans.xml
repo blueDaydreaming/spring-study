@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--下标赋值-->
+    <bean id="user1" class="com.blue.pojo.User">
+        <!-- collaborators and configuration for this bean go here -->
+        <!--<property name="name" value="小张"/>-->
+        <constructor-arg index="0" value="blue的java梦！"/>
+    </bean>
+    <!--通过属性赋值-->
+    <bean id="user2" class="com.blue.pojo.User">
+        <!-- collaborators and configuration for this bean go here -->
+        <!--<property name="name" value="小张"/>-->
+        <constructor-arg type="java.lang.String" value="blue的java梦！"/>
+    </bean>
+    <bean id="user3" class="com.blue.pojo.User" name="u3 u33">
+        <!-- collaborators and configuration for this bean go here -->
+        <!--<property name="name" value="小张"/>-->
+        <constructor-arg name="name" value="白日蓝猫"/>
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>
